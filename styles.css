@@ -123,7 +123,7 @@ body {
 }
 
 .logo-img {
-  height: 60px;
+  height: 100px;
   width: auto;
   object-fit: contain;
 }
@@ -473,6 +473,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .problema-card {
@@ -525,12 +527,20 @@ body {
   .problema-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .problema-card:nth-child(5),
+  .problema-card:nth-child(6) {
+    grid-column: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
 }
 
 @media (min-width: 1024px) {
   .problema-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  
   .section-title {
     font-size: 48px;
   }
@@ -1069,7 +1079,60 @@ body {
 }
 
 .equipe-section {
-  margin-top: 48px;
+  margin-top: 64px;
+}
+
+.equipe-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 48px;
+  padding: 40px;
+  background: linear-gradient(to bottom right, rgba(120, 177, 147, 0.05), rgba(120, 177, 147, 0.1));
+  border-radius: 20px;
+  border: 1px solid rgba(120, 177, 147, 0.2);
+}
+
+.equipe-logo-wrapper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.equipe-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.equipe-info {
+  text-align: center;
+  max-width: 800px;
+}
+
+.equipe-name {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.equipe-meaning {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--gray-700);
+}
+
+.equipe-meaning strong {
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .equipe-header {
@@ -1077,6 +1140,23 @@ body {
   align-items: center;
   gap: 12px;
   margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .equipe-intro {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .equipe-info {
+    text-align: left;
+  }
+  
+  .equipe-logo-wrapper {
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+  }
 }
 
 .equipe-header i {
@@ -1121,13 +1201,31 @@ body {
 
 @media (min-width: 640px) {
   .equipe-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  
+  .equipe-card h4 {
+    font-size: 12px;
+  }
+  
+  .equipe-card p {
+    font-size: 11px;
   }
 }
 
 @media (min-width: 1024px) {
   .equipe-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+  
+  .equipe-card h4 {
+    font-size: 14px;
+  }
+  
+  .equipe-card p {
+    font-size: 12px;
   }
 }
 
@@ -1231,8 +1329,8 @@ body {
 
 .timeline-marker i {
   color: var(--white);
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }
 
 .timeline-content {
