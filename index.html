@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToolSearch - O Gerenciador de Ferramentas Definitivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+      <div class="navbar-container">
+      <div class="navbar-logo" onclick="scrollToSection('hero')">
+        <img src="LOGO.png" alt="ToolSearch" class="logo-img">
+      </div>
+      <div class="navbar-menu" id="navbarMenu">
+        <button onclick="scrollToSection('hero')" class="nav-link" data-section="hero">Início</button>
+        <button onclick="scrollToSection('problema')" class="nav-link" data-section="problema">Problema</button>
+        <button onclick="scrollToSection('solucao')" class="nav-link" data-section="solucao">Solução</button>
+        <button onclick="scrollToSection('funcionalidades')" class="nav-link" data-section="funcionalidades">Funcionalidades</button>
+        <button onclick="scrollToSection('sobre')" class="nav-link" data-section="sobre">Sobre</button>
+        <button onclick="scrollToSection('timeline')" class="nav-link" data-section="timeline">Timeline</button>
+        <button onclick="scrollToSection('cta')" class="nav-link" data-section="cta">Download</button>
+      </div>
+      <button class="navbar-toggle" id="navbarToggle" onclick="toggleMobileMenu()">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <div class="navbar-mobile" id="navbarMobile">
+      <button onclick="scrollToSection('hero')" class="mobile-nav-link">Início</button>
+      <button onclick="scrollToSection('problema')" class="mobile-nav-link">Problema</button>
+      <button onclick="scrollToSection('solucao')" class="mobile-nav-link">Solução</button>
+      <button onclick="scrollToSection('funcionalidades')" class="mobile-nav-link">Funcionalidades</button>
+      <button onclick="scrollToSection('sobre')" class="mobile-nav-link">Sobre</button>
+      <button onclick="scrollToSection('timeline')" class="mobile-nav-link">Timeline</button>
+      <button onclick="scrollToSection('cta')" class="mobile-nav-link">Download</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-in-left">
+          <h1 class="hero-title">
+            O Gerenciador de<br>
+            <span class="hero-title-light">Ferramentas Definitivo</span>
+          </h1>
+          <p class="hero-subtitle">
+            Organize, controle e nunca mais perca uma ferramenta.<br>
+            Solução completa para empresas e escolas.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-primary">
+              <i data-feather="download"></i>
+              Baixar Agora
+            </button>
+            <button class="btn-secondary" onclick="scrollToSection('funcionalidades')">
+              <i data-feather="play"></i>
+              Ver Funcionalidades
+            </button>
+          </div>
+        </div>
+        <div class="hero-phone fade-in-right">
+          <div class="phone-float">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-content">
+                  <div class="phone-header"></div>
+                  <div class="phone-items">
+                    <div class="phone-item"></div>
+                    <div class="phone-item"></div>
+                    <div class="phone-item"></div>
+                  </div>
+                </div>
+                <div class="phone-notch"></div>
+              </div>
+            </div>
+            <div class="phone-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema Section -->
+  <section id="problema" class="section problema-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">O Problema</h2>
+        <p class="section-subtitle">Desafios reais que empresas e escolas enfrentam diariamente</p>
+      </div>
+      <div class="problema-grid">
+        <div class="problema-card fade-in-up" data-delay="0">
+          <div class="problema-icon red">
+            <i data-feather="x"></i>
+          </div>
+          <div class="problema-content">
+            <h3>Ferramentas Perdidas</h3>
+            <p>Ferramentas desaparecem sem rastro, causando perdas financeiras constantes.</p>
+          </div>
+        </div>
+        <div class="problema-card fade-in-up" data-delay="100">
+          <div class="problema-icon red">
+            <i data-feather="alert-circle"></i>
+          </div>
+          <div class="problema-content">
+            <h3>Falta de Controle</h3>
+            <p>Sem visibilidade sobre o que existe, onde está e quem está usando.</p>
+          </div>
+        </div>
+        <div class="problema-card fade-in-up" data-delay="200">
+          <div class="problema-icon red">
+            <i data-feather="package"></i>
+          </div>
+          <div class="problema-content">
+            <h3>Desorganização por Grupos</h3>
+            <p>Ferramentas espalhadas sem categorização, dificultando localização.</p>
+          </div>
+        </div>
+        <div class="problema-card fade-in-up" data-delay="300">
+          <div class="problema-icon red">
+            <i data-feather="file-text"></i>
+          </div>
+          <div class="problema-content">
+            <h3>Empréstimos sem Registro</h3>
+            <p>Empréstimos feitos sem controle, gerando confusão e perdas.</p>
+          </div>
+        </div>
+        <div class="problema-card fade-in-up" data-delay="400">
+          <div class="problema-icon red">
+            <i data-feather="map-pin"></i>
+          </div>
+          <div class="problema-content">
+            <h3>Falta de Localização</h3>
+            <p>Não se sabe onde cada ferramenta está armazenada ou em uso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solução Section -->
+  <section id="solucao" class="section solucao-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">A Solução: <span class="text-primary">ToolSearch</span></h2>
+        <p class="section-subtitle">Tudo que você precisa para gerenciar ferramentas de forma eficiente</p>
+      </div>
+      <div class="solucao-grid">
+        <div class="solucao-features fade-in-left">
+          <div class="solucao-card fade-in-up" data-delay="0">
+            <div class="solucao-icon">
+              <i data-feather="image"></i>
+            </div>
+            <h3>Adição com Foto</h3>
+            <p>Cadastre ferramentas com fotos para identificação visual rápida.</p>
+          </div>
+          <div class="solucao-card fade-in-up" data-delay="100">
+            <div class="solucao-icon">
+              <i data-feather="layers"></i>
+            </div>
+            <h3>Organização Automática</h3>
+            <p>Categorização inteligente por grupos e tipos de ferramentas.</p>
+          </div>
+          <div class="solucao-card fade-in-up" data-delay="200">
+            <div class="solucao-icon">
+              <i data-feather="map-pin"></i>
+            </div>
+            <h3>Localização e Disponibilidade</h3>
+            <p>Saiba exatamente onde cada ferramenta está e se está disponível.</p>
+          </div>
+          <div class="solucao-card fade-in-up" data-delay="300">
+            <div class="solucao-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="5" height="5"></rect>
+                <rect x="16" y="3" width="5" height="5"></rect>
+                <rect x="3" y="16" width="5" height="5"></rect>
+                <path d="M21 16h-3a2 2 0 0 1-2-2v-3"></path>
+                <path d="M21 21v.01"></path>
+                <path d="M12 7v3a2 2 0 0 1-2 2H7"></path>
+                <path d="M3 12h.01"></path>
+                <path d="M12 3h.01"></path>
+                <path d="M12 16v.01"></path>
+                <path d="M16 12h.01"></path>
+                <path d="M21 12v.01"></path>
+                <path d="M12 21h.01"></path>
+              </svg>
+            </div>
+            <h3>Empréstimo via QR Code</h3>
+            <p>Sistema rápido e seguro de empréstimo com código QR.</p>
+          </div>
+          <div class="solucao-card fade-in-up" data-delay="400">
+            <div class="solucao-icon">
+              <i data-feather="package"></i>
+            </div>
+            <h3>Controle de Quantidades</h3>
+            <p>Acompanhe estoque e quantidade de cada ferramenta em tempo real.</p>
+          </div>
+          <div class="solucao-card fade-in-up" data-delay="500">
+            <div class="solucao-icon">
+              <i data-feather="check-circle"></i>
+            </div>
+            <h3>Interface Intuitiva</h3>
+            <p>Design simples e funcional para uso diário sem complicações.</p>
+          </div>
+        </div>
+        <div class="solucao-mockup fade-in-right">
+          <div class="phone-mockup">
+            <div class="phone-frame-mockup">
+              <div class="phone-screen-mockup">
+                <div class="mockup-header">
+                  <h3>ToolSearch</h3>
+                  <div class="mockup-avatar"></div>
+                </div>
+                <div class="mockup-search"></div>
+                <div class="mockup-cards">
+                  <div class="mockup-card">
+                    <div class="mockup-card-image"></div>
+                    <div class="mockup-card-content">
+                      <div class="mockup-line"></div>
+                      <div class="mockup-line short"></div>
+                    </div>
+                  </div>
+                  <div class="mockup-card">
+                    <div class="mockup-card-image"></div>
+                    <div class="mockup-card-content">
+                      <div class="mockup-line"></div>
+                      <div class="mockup-line short"></div>
+                    </div>
+                  </div>
+                  <div class="mockup-card">
+                    <div class="mockup-card-image"></div>
+                    <div class="mockup-card-content">
+                      <div class="mockup-line"></div>
+                      <div class="mockup-line short"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mockup-qr">
+                  <div class="mockup-qr-code">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="5" height="5"></rect>
+                      <rect x="16" y="3" width="5" height="5"></rect>
+                      <rect x="3" y="16" width="5" height="5"></rect>
+                      <path d="M21 16h-3a2 2 0 0 1-2-2v-3"></path>
+                      <path d="M21 21v.01"></path>
+                      <path d="M12 7v3a2 2 0 0 1-2 2H7"></path>
+                      <path d="M3 12h.01"></path>
+                      <path d="M12 3h.01"></path>
+                      <path d="M12 16v.01"></path>
+                      <path d="M16 12h.01"></path>
+                      <path d="M21 12v.01"></path>
+                      <path d="M12 21h.01"></path>
+                    </svg>
+                  </div>
+                  <p>Empréstimo via QR Code</p>
+                </div>
+                <div class="phone-notch-mockup"></div>
+              </div>
+            </div>
+            <div class="phone-glow-mockup"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funcionalidades Section -->
+  <section id="funcionalidades" class="section funcionalidades-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Funcionalidades</h2>
+        <p class="section-subtitle">Tudo que você precisa em um só lugar</p>
+      </div>
+      <div class="funcionalidades-carousel-wrapper">
+        <div class="funcionalidades-carousel" id="funcionalidadesCarousel">
+          <div class="funcionalidade-slide active">
+            <div class="funcionalidade-icon-minimal">
+              <i data-feather="upload"></i>
+            </div>
+            <h3>Upload de Imagem</h3>
+          </div>
+          <div class="funcionalidade-slide">
+            <div class="funcionalidade-icon-minimal">
+              <i data-feather="layers"></i>
+            </div>
+            <h3>Agrupamento por Categoria</h3>
+          </div>
+          <div class="funcionalidade-slide">
+            <div class="funcionalidade-icon-minimal">
+              <i data-feather="search"></i>
+            </div>
+            <h3>Busca Filtrada</h3>
+          </div>
+          <div class="funcionalidade-slide">
+            <div class="funcionalidade-icon-minimal">
+              <i data-feather="map-pin"></i>
+            </div>
+            <h3>Localização</h3>
+          </div>
+          <div class="funcionalidade-slide">
+            <div class="funcionalidade-icon-minimal">
+              <i data-feather="check-circle"></i>
+            </div>
+            <h3>Disponibilidade</h3>
+          </div>
+          <div class="funcionalidade-slide">
+            <div class="funcionalidade-icon-minimal">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="5" height="5"></rect>
+                <rect x="16" y="3" width="5" height="5"></rect>
+                <rect x="3" y="16" width="5" height="5"></rect>
+                <path d="M21 16h-3a2 2 0 0 1-2-2v-3"></path>
+                <path d="M21 21v.01"></path>
+                <path d="M12 7v3a2 2 0 0 1-2 2H7"></path>
+                <path d="M3 12h.01"></path>
+                <path d="M12 3h.01"></path>
+                <path d="M12 16v.01"></path>
+                <path d="M16 12h.01"></path>
+                <path d="M21 12v.01"></path>
+                <path d="M12 21h.01"></path>
+              </svg>
+            </div>
+            <h3>QR Code</h3>
+          </div>
+          <div class="funcionalidade-slide">
+            <div class="funcionalidade-icon-minimal">
+              <i data-feather="package"></i>
+            </div>
+            <h3>Controle de Estoque</h3>
+          </div>
+          <div class="funcionalidade-slide">
+            <div class="funcionalidade-icon-minimal">
+              <i data-feather="clock"></i>
+            </div>
+            <h3>Histórico</h3>
+          </div>
+        </div>
+        <div class="carousel-indicators" id="funcionalidadesIndicators"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologias Section -->
+  <section id="tecnologias" class="section tecnologias-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Tecnologias Utilizadas</h2>
+        <p class="section-subtitle">Stack tecnológico moderno e robusto para garantir performance e escalabilidade</p>
+      </div>
+      <div class="tecnologias-grid-static">
+        <div class="tecnologia-item-static fade-in-up" data-delay="0">
+          <div class="tech-img-wrapper">
+            <img src="Expo.png" alt="Expo" class="tech-img">
+          </div>
+          <span>Expo</span>
+        </div>
+        <div class="tecnologia-item-static fade-in-up" data-delay="100">
+          <div class="tech-img-wrapper">
+            <img src="nodeeJS.png" alt="Node.js" class="tech-img">
+          </div>
+          <span>Node.js</span>
+        </div>
+        <div class="tecnologia-item-static fade-in-up" data-delay="200">
+          <div class="tech-img-wrapper">
+            <img src="supabase.png" alt="Supabase" class="tech-img">
+          </div>
+          <span>Supabase</span>
+        </div>
+        <div class="tecnologia-item-static fade-in-up" data-delay="300">
+          <div class="tech-img-wrapper">
+            <img src="render.png" alt="Render" class="tech-img">
+          </div>
+          <span>Render</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Section -->
+  <section id="sobre" class="section sobre-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <div class="sobre-badge">
+          <i data-feather="book-open"></i>
+          <span>Projeto Acadêmico SENAI</span>
+        </div>
+        <h2 class="section-title">Sobre o Projeto</h2>
+        <p class="section-subtitle">Desenvolvido para otimizar ambientes industriais e escolares, o ToolSearch nasceu da necessidade real de organizar e controlar ferramentas de forma eficiente.</p>
+      </div>
+      <div class="sobre-grid">
+        <div class="sobre-content fade-in-left">
+          <div class="sobre-item">
+            <div class="sobre-item-icon">
+              <i data-feather="target"></i>
+            </div>
+            <div>
+              <h3>Objetivo</h3>
+              <p>Criar uma solução completa para gerenciamento de ferramentas que elimine perdas, organize o acervo e facilite o controle de empréstimos em ambientes industriais e escolares.</p>
+            </div>
+          </div>
+          <div class="sobre-item">
+            <div class="sobre-item-icon">
+              <i data-feather="book"></i>
+            </div>
+            <div>
+              <h3>Contexto</h3>
+              <p>Projeto desenvolvido no SENAI com foco em resolver problemas reais de gestão de ferramentas, aplicando metodologias ágeis e design thinking.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-stats fade-in-right">
+          <div class="stat-card">
+            <i data-feather="target"></i>
+            <div class="stat-value">9</div>
+            <div class="stat-label">Sprints</div>
+          </div>
+          <div class="stat-card">
+            <i data-feather="book"></i>
+            <div class="stat-value">8+</div>
+            <div class="stat-label">Funcionalidades</div>
+          </div>
+        </div>
+      </div>
+      <div class="equipe-section fade-in-up">
+        <div class="equipe-header">
+          <i data-feather="users"></i>
+          <h3>Equipe</h3>
+        </div>
+        <div class="equipe-grid">
+          <div class="equipe-card">
+            <div class="equipe-avatar">A</div>
+            <h4>Alessandro Mendes de Souza</h4>
+            <p>Front-End</p>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-avatar">H</div>
+            <h4>Henrique Gabriel Neves</h4>
+            <p>Full Stack</p>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-avatar">J</div>
+            <h4>João Paulo da Cunha Alves</h4>
+            <p>Líder</p>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-avatar">M</div>
+            <h4>Matheus Barroso</h4>
+            <p>Brainstorming</p>
+          </div>
+          <div class="equipe-card">
+            <div class="equipe-avatar">I</div>
+            <h4>Isis de Vasconcelos Campos</h4>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="section timeline-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Linha do Tempo</h2>
+        <p class="section-subtitle">Jornada de desenvolvimento do ToolSearch</p>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          <div class="timeline-item fade-in-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>07/03 - 14/03</span>
+              </div>
+              <h3>Sprint 1</h3>
+              <ul>
+                <li>Elaboração do Quadro Kanban</li>
+                <li>Prototipação do Menu Principal</li>
+                <li>Mapeamento completo do projeto</li>
+                <li>Desenvolvimento do PITCH</li>
+                <li>Criação do portfólio</li>
+                <li>Documentação inicial</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>28/03 - 11/04</span>
+              </div>
+              <h3>Sprint 2</h3>
+              <ul>
+                <li>Refatoração das telas</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>11/04 - 18/04</span>
+              </div>
+              <h3>Sprint 3</h3>
+              <ul>
+                <li>Codificação das telas iniciais</li>
+                <li>Documentação Design Thinking</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>25/04 - 09/05</span>
+              </div>
+              <h3>Sprint 4</h3>
+              <ul>
+                <li>Desenvolvimento PITCH V2</li>
+                <li>Configuração e conexão do banco de dados</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>16/05 - 23/05</span>
+              </div>
+              <h3>Sprint 5</h3>
+              <ul>
+                <li>Finalização PITCH V2</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>06/08 - 20/08</span>
+              </div>
+              <h3>Sprint 6</h3>
+              <ul>
+                <li>Implementação de imagens</li>
+                <li>Sistema de QR Code</li>
+                <li>Melhorias no design</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>29/08 - 05/09</span>
+              </div>
+              <h3>Sprint 7</h3>
+              <ul>
+                <li>Sistema de autenticação</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-right">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>03/09 - 17/09</span>
+              </div>
+              <h3>Sprint 8</h3>
+              <ul>
+                <li>Reajuste da tela principal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in-left">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">
+                <i data-feather="calendar"></i>
+                <span>20/10 - 07/11</span>
+              </div>
+              <h3>Sprint 9</h3>
+              <ul>
+                <li>Feedback e ajustes SENAI</li>
+                <li>Regularização de navegação</li>
+                <li>Novas funcionalidades</li>
+                <li>Correções finais</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final Section -->
+  <section id="cta" class="section cta-section">
+    <div class="cta-pattern"></div>
+    <div class="container">
+      <div class="cta-grid">
+        <div class="cta-content fade-in-left">
+          <h2 class="cta-title">
+            Organize.<br>
+            Controle.<br>
+            <span class="cta-title-light">Nunca mais perca uma ferramenta.</span>
+          </h2>
+          <p class="cta-subtitle">
+            Comece a usar o ToolSearch hoje e transforme a forma como você gerencia ferramentas.
+          </p>
+          <button class="btn-cta">
+            <i data-feather="download"></i>
+            Baixar Agora
+          </button>
+        </div>
+        <div class="cta-phone fade-in-right">
+          <div class="phone-float-cta">
+            <div class="phone-frame-cta">
+              <div class="phone-screen-cta">
+                <div class="phone-content-cta">
+                  <div class="phone-header-cta"></div>
+                  <div class="phone-items-cta">
+                    <div class="phone-item-cta"></div>
+                    <div class="phone-item-cta"></div>
+                    <div class="phone-item-cta"></div>
+                  </div>
+                  <div class="phone-qr-cta">
+                    <div class="phone-qr-box">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: rgba(255, 255, 255, 0.8);">
+                        <rect x="3" y="3" width="5" height="5"></rect>
+                        <rect x="16" y="3" width="5" height="5"></rect>
+                        <rect x="3" y="16" width="5" height="5"></rect>
+                        <path d="M21 16h-3a2 2 0 0 1-2-2v-3"></path>
+                        <path d="M21 21v.01"></path>
+                        <path d="M12 7v3a2 2 0 0 1-2 2H7"></path>
+                        <path d="M3 12h.01"></path>
+                        <path d="M12 3h.01"></path>
+                        <path d="M12 16v.01"></path>
+                        <path d="M16 12h.01"></path>
+                        <path d="M21 12v.01"></path>
+                        <path d="M12 21h.01"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="phone-notch-cta"></div>
+              </div>
+            </div>
+            <div class="phone-glow-cta"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
