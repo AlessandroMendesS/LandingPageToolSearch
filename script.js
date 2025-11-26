@@ -7,11 +7,11 @@ function toggleMobileMenu() {
     const toggleIcon = document.querySelector('#navbarToggle i');
 
     if (mobileMenuOpen) {
-        mobileMenu.style.display = 'block';
+        mobileMenu.classList.add('active');
         toggleIcon.setAttribute('data-feather', 'x');
         feather.replace();
     } else {
-        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('active');
         toggleIcon.setAttribute('data-feather', 'menu');
         feather.replace();
     }
@@ -21,9 +21,10 @@ function toggleMobileMenu() {
 function scrollToSection(id) {
     const element = document.getElementById(id);
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         mobileMenuOpen = false;
-        document.getElementById('navbarMobile').style.display = 'none';
+        const mobileMenu = document.getElementById('navbarMobile');
+        mobileMenu.classList.remove('active');
         const toggleIcon = document.querySelector('#navbarToggle i');
         toggleIcon.setAttribute('data-feather', 'menu');
         feather.replace();
@@ -34,7 +35,7 @@ function scrollToSection(id) {
 let activeSection = 'hero';
 
 function updateActiveSection() {
-    const sections = ['hero', 'problema', 'solucao', 'funcionalidades', 'tecnologias', 'sobre', 'timeline', 'cta'];
+    const sections = ['hero', 'estatisticas', 'problema', 'solucao', 'funcionalidades', 'tecnologias', 'sobre', 'timeline', 'cta'];
     const scrollPosition = window.scrollY + window.innerHeight / 2;
 
     for (const section of sections) {
@@ -99,6 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize funcionalidades carousel
     initFuncionalidadesCarousel();
+    
+    // Initialize statistics animation
+    initStatisticsAnimation();
 
     // Add scroll event listeners
     window.addEventListener('scroll', () => {
@@ -174,7 +178,7 @@ document.addEventListener('click', (e) => {
 
     if (mobileMenuOpen && !navbar.contains(e.target)) {
         mobileMenuOpen = false;
-        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('active');
         const toggleIcon = toggle.querySelector('i');
         toggleIcon.setAttribute('data-feather', 'menu');
         feather.replace();
@@ -297,5 +301,51 @@ function initFuncionalidadesCarousel() {
         updateCarousel();
     }, 3000);
 }
+
+// Animated Counter for Statistics
+function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + (target >= 1000 ? '+' : '%');
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + (target >= 1000 ? '+' : '%');
+        }
+    }, 16);
+}
+
+// Initialize statistics animation
+function initStatisticsAnimation() {
+    const statisticsSection = document.getElementById('estatisticas');
+    if (!statisticsSection) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const valueElements = entry.target.querySelectorAll('.estatistica-value');
+                valueElements.forEach(el => {
+                    const target = parseInt(el.getAttribute('data-target'));
+                    if (target && !el.classList.contains('animated')) {
+                        el.classList.add('animated');
+                        animateCounter(el, target);
+                    }
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    observer.observe(statisticsSection);
+}
+
+// Initialize statistics on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    initStatisticsAnimation();
+});
 
 
