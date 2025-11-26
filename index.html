@@ -14,8 +14,8 @@
   <!-- Navbar -->
   <nav id="navbar" class="navbar">
       <div class="navbar-container">
-      <div class="navbar-logo" onclick="scrollToSection('hero')">
-        <img src="LOGO.png" alt="ToolSearch" class="logo-img">
+      <div class="navbar-brand" onclick="scrollToSection('hero')">
+        <span class="brand-text">ToolSearch</span>
       </div>
       <div class="navbar-menu" id="navbarMenu">
         <button onclick="scrollToSection('hero')" class="nav-link" data-section="hero">Início</button>
@@ -24,7 +24,6 @@
         <button onclick="scrollToSection('funcionalidades')" class="nav-link" data-section="funcionalidades">Funcionalidades</button>
         <button onclick="scrollToSection('sobre')" class="nav-link" data-section="sobre">Sobre</button>
         <button onclick="scrollToSection('timeline')" class="nav-link" data-section="timeline">Timeline</button>
-        <button onclick="scrollToSection('cta')" class="nav-link" data-section="cta">Download</button>
       </div>
       <button class="navbar-toggle" id="navbarToggle" onclick="toggleMobileMenu()">
         <i data-feather="menu"></i>
@@ -37,14 +36,27 @@
       <button onclick="scrollToSection('funcionalidades')" class="mobile-nav-link">Funcionalidades</button>
       <button onclick="scrollToSection('sobre')" class="mobile-nav-link">Sobre</button>
       <button onclick="scrollToSection('timeline')" class="mobile-nav-link">Timeline</button>
-      <button onclick="scrollToSection('cta')" class="mobile-nav-link">Download</button>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="hero" class="section hero-section">
     <div class="hero-pattern"></div>
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
     <div class="container">
+      <div class="hero-logo-wrapper fade-in-scale">
+        <img src="LOGO.png" alt="ToolSearch" class="hero-logo">
+        <div class="logo-glow"></div>
+      </div>
       <div class="hero-grid">
         <div class="hero-content fade-in-left">
           <h1 class="hero-title">
@@ -56,10 +68,6 @@
             Solução completa para empresas e escolas.
           </p>
           <div class="hero-buttons">
-            <button class="btn-primary">
-              <i data-feather="download"></i>
-              Baixar Agora
-            </button>
             <button class="btn-secondary" onclick="scrollToSection('funcionalidades')">
               <i data-feather="play"></i>
               Ver Funcionalidades
@@ -89,6 +97,35 @@
     <div class="scroll-indicator">
       <div class="scroll-mouse">
         <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estatísticas Section -->
+  <section id="estatisticas" class="section estatisticas-section">
+    <div class="container">
+      <div class="estatisticas-grid">
+        <div class="estatistica-card fade-in-up" data-delay="0">
+          <div class="estatistica-icon">
+            <i data-feather="trending-up"></i>
+          </div>
+          <div class="estatistica-value" data-target="95">0</div>
+          <div class="estatistica-label">% Redução de Perdas</div>
+        </div>
+        <div class="estatistica-card fade-in-up" data-delay="100">
+          <div class="estatistica-icon">
+            <i data-feather="clock"></i>
+          </div>
+          <div class="estatistica-value" data-target="80">0</div>
+          <div class="estatistica-label">% Economia de Tempo</div>
+        </div>
+        <div class="estatistica-card fade-in-up" data-delay="200">
+          <div class="estatistica-icon">
+            <i data-feather="check-circle"></i>
+          </div>
+          <div class="estatistica-value" data-target="1000">0</div>
+          <div class="estatistica-label">+ Ferramentas Gerenciadas</div>
+        </div>
       </div>
     </div>
   </section>
@@ -278,6 +315,7 @@
 
   <!-- Funcionalidades Section -->
   <section id="funcionalidades" class="section funcionalidades-section">
+    <div class="funcionalidades-bg-pattern"></div>
     <div class="container">
       <div class="section-header fade-in-up">
         <h2 class="section-title">Funcionalidades</h2>
@@ -659,10 +697,6 @@
           <p class="cta-subtitle">
             Comece a usar o ToolSearch hoje e transforme a forma como você gerencia ferramentas.
           </p>
-          <button class="btn-cta">
-            <i data-feather="download"></i>
-            Baixar Agora
-          </button>
         </div>
         <div class="cta-phone fade-in-right">
           <div class="phone-float-cta">
